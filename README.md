@@ -25,3 +25,45 @@ This repository contains a simple end-to-end sample demonstrating how to build a
    npm start
    ```
 4. Navigate to `http://localhost:3000` to view the catalog.
+
+---
+
+## HRMS Webapp
+
+This repository also includes a minimal HRMS (Human Resource Management System) implementation using a Django REST backend and a React frontend built with Material UI. The landing page displays a simple dashboard and React Router is used to navigate between Employees and Departments pages.
+
+### Backend
+
+The Django project is located in `hrms_backend/`. It exposes two REST endpoints under `/api/` for managing employees and departments. To run the backend:
+
+```bash
+cd hrms_backend
+python3 manage.py migrate  # create the SQLite database
+python3 manage.py runserver
+```
+
+### Frontend
+
+The React app is located in `hrms_frontend/`. It uses Material UI components and React Router for navigation. To start the development server:
+
+```bash
+cd hrms_frontend
+npm install
+npm start
+```
+
+### Tests
+
+Unit tests are provided for both the Django backend and the React frontend:
+
+```bash
+# Backend tests
+cd hrms_backend
+python3 manage.py test
+
+# Frontend tests
+cd hrms_frontend
+npm test
+```
+
+These tests require the appropriate dependencies to be installed.
